@@ -1,12 +1,12 @@
 import data from '../data'
 import { useEffect, useState } from "react";
-export default function LeftPane(){
+export default function LeftPane(props){
     const [option, setOption] = useState("academics")
     return (
         <div className="left-pane">
             <Topbar setOption={setOption}></Topbar>
             <div className="list-view">
-                <ListView list={global.data[option]}></ListView>
+                <ListView list={global.data[option]} setState={props.setState}></ListView>
             </div>
         </div>
     )
@@ -15,14 +15,16 @@ export default function LeftPane(){
 function ListView(props){
     var listView = []
     for(let i=0;i<props.list.length;i++){
-        listView.push(<ListViewComponent key={i} data={props.list[i]}></ListViewComponent>)
+        listView.push(<ListViewComponent key={i} data={props.list[i]} setState={props.setState}></ListViewComponent>)
     }
     return listView;
 }
 
 function ListViewComponent(props){
     return (
-        <div className="lv-component">
+        <div className="lv-component" onClick={() => {
+            props.setState(props.data.state)
+        }}>
             <div className="img-icon"></div>
             <div className="text-group">
                 <span className="header-text">{props.data.header}</span>
@@ -59,7 +61,6 @@ function Topbar(props){
                     // props.setOption("more")
                 }}>M</button>
             </div>
-            
         </div>
     )
 }

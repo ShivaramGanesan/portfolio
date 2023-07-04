@@ -1,18 +1,64 @@
-import intro from '../img/intro.png'
-export default function RightPane(){
+import intro from '../img/intro2.png'
+import info from '../info'
+export default function RightPane(props){
+    console.log(props.state)
+    console.log(props)
     return (
         <div className="right-pane">
-            <IntroText/>
+            {props.state == "home" && <IntroText/>}
+            {props.state == "ucr" && 
+            <div><TopDummy/><div className='chat-area'><Ucr/></div></div>}
         </div>
     )
+}
+
+function TopDummy(){
+    return (<div className='top-bar'>
+        <div className="profile-icon"></div>
+        <span>Text</span>
+        <span>online</span>
+    </div>)
+}
+
+function Chat(props){
+    return (
+        <div className='chat-bubble'>
+            {props.text}
+        </div>
+    )
+}
+
+function IncomingMessageChat(props){
+    return (
+        <div className='incoming-chat-bubble'>
+            {props.text}
+        </div>
+    )
+}
+
+function Ucr(){
+    let details = []
+    for(let i=0;i<global.info.ucr.length;i++){
+        var detail = global.info.ucr[i];
+        if(detail.incoming){
+            details.push(<IncomingMessageChat text={detail.text}></IncomingMessageChat>)
+        }
+        else{
+            details.push(<Chat text={detail.text}></Chat>)
+        }
+    }
+    return details;
 }
 
 function IntroText(){
     return (
         <div className="intro-text">
             <img className="intro-img" src={intro}></img>
-            <div>Hi there!  I am <span> Shivaram Ganesan</span> </div>
-            
+            <div>Hi there!  I am </div><h3> Shivaram Ganesan</h3>
+            <p>I am a Software engineer with 3 years of work experience</p>
+            <div className='tech-stack'>
+
+            </div>
         </div>
     )
 }
