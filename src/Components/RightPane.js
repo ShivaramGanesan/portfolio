@@ -6,8 +6,7 @@ export default function RightPane(props){
     return (
         <div className="right-pane">
             {props.state == "home" && <IntroText/>}
-            {props.state == "ucr" && 
-            <div><TopDummy/><div className='chat-area'><Ucr/></div></div>}
+            {props.state != "home" && <div><TopDummy/><div className='chat-area'><Conversation id={props.state}/></div></div>}
         </div>
     )
 }
@@ -36,10 +35,10 @@ function IncomingMessageChat(props){
     )
 }
 
-function Ucr(){
+function Conversation(props){
     let details = []
-    for(let i=0;i<global.info.ucr.length;i++){
-        var detail = global.info.ucr[i];
+    for(let i=0;i<global.info[props.id].length;i++){
+        var detail = global.info[props.id][i];
         if(detail.incoming){
             details.push(<IncomingMessageChat text={detail.text}></IncomingMessageChat>)
         }
