@@ -36,3 +36,156 @@
     transform: rotate(360deg);
   }
 }
+
+.window{
+  border: solid 5px;
+  width: 100%;
+  /* height:100%; */
+  /* position: absolute; */
+  margin: auto;
+}
+
+body{
+  padding: 20px;
+  color: white;
+}
+
+.top-bar{
+  height: 20px;
+  background-color: rgb(34, 44, 50);
+}
+
+.window{
+  display: flex;
+  flex-direction: row;
+}
+
+.left-pane{
+  flex-grow: 1;
+  width: 30%;
+  /* flex-shrink: 0; */
+}
+.right-pane{
+  flex-grow: 4;
+}
+.window-icon{
+  border: solid 1px;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  margin: 2px;
+}
+.window-icons{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.profile-icon{
+  width: 50px;
+  height: 50px;
+  border: solid;
+  border-radius: 50px;
+  background-color: rgb(107, 113, 117);
+}
+
+.top-bar{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  height: fit-content;
+}
+
+.action-button{
+  width: 50px;
+  height: 50px;
+  border: solid;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.window-icons{
+  flex-grow: 1;
+}
+.profile-icon{
+  flex-grow: 0;
+  margin-right: 10px;
+}
+.action-buttons{
+  flex-grow: 0;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.img-icon{
+  width: 50px;
+  height: 50px;
+  border: solid;
+  border-radius: 50px;
+  flex-grow: 0;
+  background-color: rgb(107, 113, 117);
+}
+.text-group{
+  flex-grow: 1;
+  margin: auto;
+}
+
+.text-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.time-text{
+  flex-grow: 1;
+  padding-right: 10px;
+  margin: auto;
+  text-align: right;
+  color: white;
+  font-size: 12px;
+}
+
+.lv-component{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  border-bottom: solid 3px rgb(35,45,51);
+  padding-bottom: 10px;
+}
+
+.header-text{
+  text-align: left;
+  padding-left: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sub-text{
+  text-align: left;
+  padding-left: 10px; 
+  color: white;
+  font-size: 14px;
+}
+
+.red-icon{
+  background-color: rgb(237, 106, 94);
+}
+.yellow-icon{
+  background-color: rgb(245, 191, 79);
+}
+
+.green-icon{
+  background-color: rgb(98, 197, 84);
+}
+
+.left-pane{
+  background-color: rgb(20, 27, 32);
+}
+
+.intro-img{
+  width: 200px;
+}
+
+.right-pane{
+  background-color: rgb(36, 46, 52);
+}
