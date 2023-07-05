@@ -1,24 +1,24 @@
 import data from '../data'
+import defaults from '../info'
 import { useEffect, useState } from "react";
 export default function LeftPane(props){
     const [option, setOption] = useState("academics")
+    const [selectedComponent, updateSelectedComponent] = useState(0);
+    console.log("current option :: " + option)
     return (
         <div className="left-pane">
-            <Topbar setOption={setOption}></Topbar>
+            <Topbar setOption={setOption} updateSelectedComponent={updateSelectedComponent} setState={props.setState}></Topbar>
             <div className="list-view">
-                <ListView list={global.data[option]} setState={props.setState}></ListView>
+                <ListView list={global.data[option]} setState={props.setState} selectedComponent={selectedComponent} updateSelectedComponent = {updateSelectedComponent}></ListView>
             </div>
         </div>
     )
 }
 
 function ListView(props){
-    const [selectedComponent, updateSelectedComponent] = useState("");
-    console.log("selected component");
-    console.log(selectedComponent)
     var listView = []
     for(let i=0;i<props.list.length;i++){
-        listView.push(<ListViewComponent updateSelectedComponent={updateSelectedComponent} selectedComponent={selectedComponent == i} key={i} index={i} data={props.list[i]} setState={props.setState}></ListViewComponent>)
+        listView.push(<ListViewComponent updateSelectedComponent={props.updateSelectedComponent} selectedComponent={props.selectedComponent == i} key={i} index={i} data={props.list[i]} setState={props.setState}></ListViewComponent>)
     }
     return listView;
 }
@@ -54,12 +54,18 @@ function Topbar(props){
             <div className="action-buttons">
                 <button id='academics' className="academics action-button" onClick={() => {
                     props.setOption("academics")
+                    props.updateSelectedComponent(0);
+                    props.setState(global.defaults["academics"]);
                 }}>A</button>
                 <button id='experience' className="experience action-button" onClick={() => {
                     props.setOption("experience")
+                    props.updateSelectedComponent(0);
+                    props.setState(global.defaults["experience"]);
                 }}>E</button>
                 <button id='projects' className="projects action-button" onClick={() => {
                     props.setOption("projects")
+                    props.updateSelectedComponent(0);
+                    props.setState(global.defaults["projects"]);
                 }}>P</button>
                 {/* <button id='tools' className="tools action-button" onClick={() => {
                     props.setOption("tools")

@@ -100,3 +100,9 @@ module.exports = global.info = {
     "react": [],
     "scraping": []
 }
+
+ module.exports = global.defaults = {
+    "academics": "ucr",
+    "experience": "zoho",
+    "projects": "hadoop"
+ }
