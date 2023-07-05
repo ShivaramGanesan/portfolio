@@ -3,19 +3,25 @@ import info from '../info'
 export default function RightPane(props){
     console.log(props.state)
     console.log(props)
-    return (
-        <div className="right-pane">
-            {props.state == "home" && <IntroText/>}
-            {props.state != "home" && <div><TopDummy/><div className='chat-area'><Conversation id={props.state}/></div></div>}
-        </div>
-    )
+    if(props.state == "home"){
+        return (<div className='right-pane'>
+            <IntroText/>
+        </div>)
+    }
+    else{
+        return (<div className='right-pane'>
+            <TopDummy/><div className='chat-area'><Conversation id={props.state}/></div>
+        </div>)
+    }
 }
 
 function TopDummy(){
     return (<div className='top-bar'>
         <div className="profile-icon"></div>
-        <span>Text</span>
-        <span>online</span>
+        <div className='header-text-top'>
+            <span className='top-text'>You</span>
+            <span className='online-text'>online</span>
+        </div>
     </div>)
 }
 

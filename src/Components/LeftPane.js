@@ -13,24 +13,31 @@ export default function LeftPane(props){
 }
 
 function ListView(props){
+    const [selectedComponent, updateSelectedComponent] = useState("");
+    console.log("selected component");
+    console.log(selectedComponent)
     var listView = []
     for(let i=0;i<props.list.length;i++){
-        listView.push(<ListViewComponent key={i} data={props.list[i]} setState={props.setState}></ListViewComponent>)
+        listView.push(<ListViewComponent updateSelectedComponent={updateSelectedComponent} selectedComponent={selectedComponent == i} key={i} index={i} data={props.list[i]} setState={props.setState}></ListViewComponent>)
     }
     return listView;
 }
 
 function ListViewComponent(props){
+    console.log(props.selectedComponent)
     return (
-        <div className="lv-component" onClick={() => {
-            props.setState(props.data.state)
-        }}>
-            <div className="img-icon"></div>
-            <div className="text-group">
-                <span className="header-text">{props.data.header}</span>
-                <span className="sub-text">{props.data.subtext}</span>
+        <div key={props.index} className={props.selectedComponent ? "selected-tab" : props.index}>
+            <div className='lv-component' onClick={() => {
+                props.setState(props.data.state)
+                props.updateSelectedComponent(props.index);
+            }}>
+                <div className="img-icon"></div>
+                <div className="text-group">
+                    <span className="header-text">{props.data.header}</span>
+                    <span className="sub-text">{props.data.subtext}</span>
+                </div>
+                <div className="time-text">{props.data.time}</div>
             </div>
-            <div className="time-text">{props.data.time}</div>
         </div>
     )
 }
