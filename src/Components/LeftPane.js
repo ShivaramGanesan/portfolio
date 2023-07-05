@@ -56,6 +56,10 @@ function Topbar(props){
         "text": "Resume"
     }]
     const [isMenuVisible, setMenuVisibility] = useState(false);
+    var moreClassName = "more action-button"
+    if(isMenuVisible){
+        moreClassName+=" more-selected"
+    }
     return(
         <div className="top-bar">
             <div className="window-icons">
@@ -83,10 +87,10 @@ function Topbar(props){
                 {/* <button id='tools' className="tools action-button" onClick={() => {
                     props.setOption("tools")
                 }}>T</button> */}
-                <button id='more' className="more action-button" onClick={() => {
+                <button id='more' className={moreClassName} onClick={() => {
                     // props.setOption("more")
                     setMenuVisibility(!isMenuVisible)
-                }}>M
+                }}><i className="down-arrow"></i>
                     {isMenuVisible ? <Dropdown list={menu} clickListener={(id)=>{
                         console.log("triggered :: " + id)
                         if(id == "resume"){

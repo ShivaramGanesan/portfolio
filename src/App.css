@@ -105,9 +105,11 @@ body{
 .action-button{
   width: 50px;
   height: 50px;
-  border: solid;
+  /* border: solid; */
   border-radius: 50px;
   margin-right: 5px;
+  border: none;
+  background: none;
 }
 
 .window-icons{
@@ -126,7 +128,7 @@ body{
 .img-icon{
   width: 50px;
   height: 50px;
-  border: solid;
+  /* border: solid; */
   border-radius: 50px;
   flex-grow: 0;
   background-color: rgb(107, 113, 117);
@@ -270,6 +272,7 @@ body{
   /* padding: 12px 16px; */
   z-index: 1;
   border-radius: 10px;
+  top: 80px;
 }
 
 .dropdown-component{
@@ -286,4 +289,22 @@ body{
 .dc-text{
   padding: 10px;
   text-align: left;
+}
+
+.down-arrow{
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border: solid rgb(174, 184, 190);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.more-button{
+  background: none;
+  border: none;
+}
+
+.more-selected{
+  background-color: rgb(45, 57, 65);
 }
