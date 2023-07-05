@@ -87,7 +87,18 @@ function Topbar(props){
                     // props.setOption("more")
                     setMenuVisibility(!isMenuVisible)
                 }}>M
-                    {isMenuVisible ? <Dropdown list={menu}></Dropdown>: null}
+                    {isMenuVisible ? <Dropdown list={menu} clickListener={(id)=>{
+                        console.log("triggered :: " + id)
+                        if(id == "resume"){
+
+                        }
+                        else if(id == "linkedin"){
+                            window.open("https://www.linkedin.com/in/shivaramganesan/", '_blank');
+                        }
+                        else if(id == "github"){
+                            window.open("https://github.com/ShivaramGanesan", '_blank');
+                        }
+                    }}></Dropdown>: null}
                 </button>
             </div>
         </div>
