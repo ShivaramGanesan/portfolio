@@ -1,6 +1,7 @@
 import data from '../data'
 import defaults from '../info'
 import { useEffect, useState } from "react";
+import Dropdown from './Dropdown';
 export default function LeftPane(props){
     const [option, setOption] = useState("academics")
     const [selectedComponent, updateSelectedComponent] = useState(0);
@@ -43,6 +44,18 @@ function ListViewComponent(props){
 }
 
 function Topbar(props){
+
+    var menu = [{
+        id: "github",
+        "text": "Github"
+    },{
+        id: "linkedin",
+        "text": "LinkedIn"
+    },{
+        id: "resume",
+        "text": "Resume"
+    }]
+    const [isMenuVisible, setMenuVisibility] = useState(false);
     return(
         <div className="top-bar">
             <div className="window-icons">
@@ -72,7 +85,10 @@ function Topbar(props){
                 }}>T</button> */}
                 <button id='more' className="more action-button" onClick={() => {
                     // props.setOption("more")
-                }}>M</button>
+                    setMenuVisibility(!isMenuVisible)
+                }}>M
+                    {isMenuVisible ? <Dropdown list={menu}></Dropdown>: null}
+                </button>
             </div>
         </div>
     )
