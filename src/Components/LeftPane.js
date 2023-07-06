@@ -3,6 +3,8 @@ import defaults from '../info'
 import { useEffect, useState } from "react";
 import Dropdown from './Dropdown';
 import cloud from '../img/wordcloud2.png'
+import shiva from "../img/shiva.jpeg"
+
 
 export default function LeftPane(props){
     const [option, setOption] = useState("")
@@ -27,7 +29,7 @@ function ListView(props){
     var listView = []
     if(props.list){
         for(let i=0;i<props.list.length;i++){
-            listView.push(<ListViewComponent updateSelectedComponent={props.updateSelectedComponent} selectedComponent={props.selectedComponent == i} key={i} index={i} data={props.list[i]} setState={props.setState}></ListViewComponent>)
+            listView.push(<ListViewComponent img={props.list[i].img} updateSelectedComponent={props.updateSelectedComponent} selectedComponent={props.selectedComponent == i} key={i} index={i} data={props.list[i]} setState={props.setState}></ListViewComponent>)
         }
     }
     else{
@@ -41,13 +43,16 @@ function ListView(props){
 }
 
 function ListViewComponent(props){
+    // const logo = require(props.img)
+    // console.log(props.img)
+    // console.log(logo);
     return (
         <div key={props.index} className={props.selectedComponent ? "selected-tab" : props.index}>
             <div className='lv-component' onClick={() => {
                 props.setState(props.data.state)
                 props.updateSelectedComponent(props.index);
             }}>
-                <div className="img-icon"></div>
+                <img className="img-icon" src={props.img}></img>
                 <div className="text-group">
                     <span className="header-text">{props.data.header}</span>
                     <span className="sub-text">{props.data.subtext}</span>
@@ -94,7 +99,7 @@ function Topbar(props){
                 <div className="window-icon yellow-icon"></div>
                 <div className="window-icon green-icon"></div>
             </div>
-            <div className="profile-icon"></div>
+            <img className="profile-icon" src={shiva}></img>
             <div className="action-buttons">
                 <button id='academics' className={acadClass} onClick={() => {
                     props.setOption("academics")
