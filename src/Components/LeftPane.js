@@ -107,9 +107,13 @@ function Topbar(props){
     return(
         <div className="top-bar">
             <div className="window-icons">
-                <div className="window-icon red-icon"></div>
+                <div className="window-icon red-icon" onClick={()=>{
+                    window.close()
+                }}></div>
                 <div className="window-icon yellow-icon"></div>
-                <div className="window-icon green-icon"></div>
+                <div className="window-icon green-icon" onClick={()=>{
+                    document.body.requestFullscreen();
+                }}></div>
             </div>
             <img className="profile-icon" src={shiva}></img>
             <div className="action-buttons">
