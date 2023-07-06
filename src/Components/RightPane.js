@@ -16,14 +16,14 @@ export default function RightPane(props){
             }
         }
         return (<div className='right-pane'>
-            <TopDummy header={headerDetails.header} subtext={headerDetails.subtext}/><div className='chat-area'><Conversation id={props.state}/></div>
+            <TopDummy img={props.img} header={headerDetails.header} subtext={headerDetails.subtext}/><div className='chat-area'><Conversation id={props.state}/></div>
         </div>)
     }
 }
 
 function TopDummy(props){
     return (<div className='top-bar'>
-        <div className="profile-icon"></div>
+        <img className="profile-icon" src={props.img}></img>
         <div className='header-text-top'>
             <span className='top-text'>{props.header}</span>
             <span className='online-text'>{props.subtext}</span>

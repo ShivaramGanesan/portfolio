@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import Dropdown from './Dropdown';
 import cloud from '../img/wordcloud2.png'
 import shiva from "../img/shiva.jpeg"
+import ucrImage from "../img/ucr.png"
+import zohoImg from "../img/zoho.png"
+import hadoopImg from "../img/hadoop.jpg"
 
 
 export default function LeftPane(props){
@@ -11,7 +14,7 @@ export default function LeftPane(props){
     const [selectedComponent, updateSelectedComponent] = useState(0);
     return (
         <div className="left-pane">
-            <Topbar setOption={setOption} updateSelectedComponent={updateSelectedComponent} setState={props.setState} option={option}></Topbar>
+            <Topbar setChatImg={props.setChatImg} setOption={setOption} updateSelectedComponent={updateSelectedComponent} setState={props.setState} option={option}></Topbar>
             <div className='prev-pane'>
                 <button className='prev-button' onClick={()=>{
                     setOption("")
@@ -19,7 +22,7 @@ export default function LeftPane(props){
                 }}><i className='left-arrow'></i></button>
             </div>
             <div className="list-view">
-                <ListView list={global.data[option]} setState={props.setState} selectedComponent={selectedComponent} updateSelectedComponent = {updateSelectedComponent}></ListView>
+                <ListView setChatImg={props.setChatImg} list={global.data[option]} setState={props.setState} selectedComponent={selectedComponent} updateSelectedComponent = {updateSelectedComponent}></ListView>
             </div>
         </div>
     )
@@ -29,7 +32,7 @@ function ListView(props){
     var listView = []
     if(props.list){
         for(let i=0;i<props.list.length;i++){
-            listView.push(<ListViewComponent img={props.list[i].img} updateSelectedComponent={props.updateSelectedComponent} selectedComponent={props.selectedComponent == i} key={i} index={i} data={props.list[i]} setState={props.setState}></ListViewComponent>)
+            listView.push(<ListViewComponent setChatImg={props.setChatImg} img={props.list[i].img} updateSelectedComponent={props.updateSelectedComponent} selectedComponent={props.selectedComponent == i} key={i} index={i} data={props.list[i]} setState={props.setState}></ListViewComponent>)
         }
     }
     else{
@@ -51,6 +54,7 @@ function ListViewComponent(props){
             <div className='lv-component' onClick={() => {
                 props.setState(props.data.state)
                 props.updateSelectedComponent(props.index);
+                props.setChatImg(props.img)
             }}>
                 <img className="img-icon" src={props.img}></img>
                 <div className="text-group">
@@ -105,6 +109,7 @@ function Topbar(props){
                     props.setOption("academics")
                     props.updateSelectedComponent(0);
                     props.setState(global.defaults["academics"]);
+                    props.setChatImg(ucrImage)
                 }}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                         <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
@@ -116,6 +121,7 @@ function Topbar(props){
                     props.setOption("experience")
                     props.updateSelectedComponent(0);
                     props.setState(global.defaults["experience"]);
+                    props.setChatImg(zohoImg)
                 }}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                         <path fillRule="evenodd" d="M7.5 5.25a3 3 0 013-3h3a3 3 0 013 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0112 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 017.5 5.455V5.25zm7.5 0v.09a49.488 49.488 0 00-6 0v-.09a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5zm-3 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clipRule="evenodd" />
@@ -126,6 +132,7 @@ function Topbar(props){
                     props.setOption("projects")
                     props.updateSelectedComponent(0);
                     props.setState(global.defaults["projects"]);
+                    props.setChatImg(hadoopImg)
                 }}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                         <path fillRule="evenodd" d="M14.447 3.027a.75.75 0 01.527.92l-4.5 16.5a.75.75 0 01-1.448-.394l4.5-16.5a.75.75 0 01.921-.526zM16.72 6.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 11-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 010-1.06zm-9.44 0a.75.75 0 010 1.06L2.56 12l4.72 4.72a.75.75 0 11-1.06 1.06L.97 12.53a.75.75 0 010-1.06l5.25-5.25a.75.75 0 011.06 0z" clipRule="evenodd" />
