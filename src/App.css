@@ -250,7 +250,9 @@ body{
   /* height: calc(100vh - 10px);
   box-sizing: border-box; */
   padding-bottom: 20px;
+  border-radius: 0px 0px 20px 0px;
 }
+
 .header-text-top{
   display: flex;
   flex-direction: column;
@@ -260,6 +262,7 @@ body{
   text-align: left;
   margin: auto;
   margin-left: 0;
+  font-weight: bold;
   /* flex-grow: 4; */
 }
 
@@ -352,4 +355,8 @@ body{
 .into-img-left{
   width: 200px;
   border-radius: 200px;
+}
+
+.list-view{
+  overflow: scroll;
 }

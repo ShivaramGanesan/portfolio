@@ -98,7 +98,11 @@ module.exports = global.info = {
     ],
     "hadoop":[],
     "react": [],
-    "scraping": []
+    "scraping": [],
+    "aipacman":[],
+    "parallel_algo":[],
+    "compiler":[],
+    "maskdetection": []
 }
 
  module.exports = global.defaults = {
@@ -121,11 +125,40 @@ module.exports = global.info = {
         "subtext": "2019-2022"
     },
     "zoho_pt":{
-        "header": "Zoho Corporation, Project Trainee",
+        "header": "Zoho Corporation, Project Trainee (Internship)",
         "subtext": "2018-2019"
     },
     "nokia":{
-        "header": "Nokia Solutions and Networks",
-        "subtext": "2018-2018"
+        "header": "Nokia Solutions and Networks (Internship)",
+        "subtext": "2017-2018"
+    },
+    "hadoop": {
+        "header": "Stable temperature analysis",
+        "subtext": ""
+    },
+    "react":{
+        "header": "Resume builder",
+        "subtext": ""
+    },
+    "scraping":{
+        "header": "QnA search engine",
+        "subtext": ""
+    },
+    "parallel_algo":{
+        "header": "Parallel Algorithms",
+        "subtext": ""
+    },
+    "compiler":{
+        "header": "Interprocedural Analysis",
+        "subtext": ""
+    },
+    "aipacman":{
+        "header": "AI Pacman",
+        "subtext": ""
+    },
+    "maskdetection":{
+        "header": "Covid Mask Detection",
+        "subtext": ""
     }
+    
  }

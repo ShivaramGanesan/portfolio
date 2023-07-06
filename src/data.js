@@ -59,6 +59,34 @@ module.exports = global.data = {
             "subtext": "Scraping, Lucene, Faiss, BERT",
             "time": "",
             "state": "scraping"
+        },
+        {
+            "img": require("./img/mask.jpeg"),
+            "header": "Covid Mask Detection",
+            "subtext": "CNN, python",
+            "time": "",
+            "state": "maskdetection"
+        },
+        {
+            "img": require("./img/pacman.png"),
+            "header": "AI Pacman",
+            "subtext": "search algorithms",
+            "time": "",
+            "state": "aipacman"
+        },
+        {
+            "img": require("./img/dummy.jpeg"),
+            "header": "Parallel Algorithms",
+            "subtext": "sorting, graph algorithms",
+            "time": "",
+            "state": "parallel_algo"
+        },
+        {
+            "img": require("./img/dummy.jpeg"),
+            "header": "Inter procedural analysis",
+            "subtext": "LLVM, C++",
+            "time": "",
+            "state": "compiler"
         }
     ]
 }
