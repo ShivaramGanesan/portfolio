@@ -22,7 +22,7 @@ export default function RightPane(props){
 }
 
 function TopDummy(props){
-    return (<div className='top-bar'>
+    return (<div className='top-bar top-bar-right'>
         <img className="profile-icon" src={props.img}></img>
         <div className='header-text-top'>
             <span className='top-text'>{props.header}</span>

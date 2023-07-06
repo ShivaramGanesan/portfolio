@@ -61,6 +61,9 @@ body{
   background-color: rgb(34, 44, 50);
   /* box-shadow: 0px 5px 50px 0px black; */
 }
+.top-bar-right{
+  border-radius: 0px 20px 0px 0px !important;
+}
 
 .window{
   display: flex;
