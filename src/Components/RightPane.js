@@ -1,8 +1,6 @@
 import intro from '../img/intro2.png'
 import info from '../info'
 export default function RightPane(props){
-    console.log(props.state)
-    console.log(props)
     if(props.state == "home"){
         return (<div className='right-pane'>
             <IntroText/>
@@ -46,10 +44,10 @@ function Conversation(props){
     for(let i=0;i<global.info[props.id].length;i++){
         var detail = global.info[props.id][i];
         if(detail.incoming){
-            details.push(<IncomingMessageChat text={detail.text}></IncomingMessageChat>)
+            details.push(<IncomingMessageChat key={i} text={detail.text}></IncomingMessageChat>)
         }
         else{
-            details.push(<Chat text={detail.text}></Chat>)
+            details.push(<Chat key={i} text={detail.text}></Chat>)
         }
     }
     return details;
