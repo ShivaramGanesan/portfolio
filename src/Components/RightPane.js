@@ -32,9 +32,17 @@ function TopDummy(props){
 }
 
 function Chat(props){
+    let textClass = 'chat-bubble';
+    if(props.detail.link){
+        textClass += " chat-link"
+    }
     return (
-        <div className='chat-bubble'>
-            {props.text}
+        <div className={textClass} onClick={()=>{
+            if(props.detail.link){
+                window.open(props.detail.link, "_blank");
+            }
+        }}>
+            {props.detail.text}
         </div>
     )
 }
@@ -55,7 +63,7 @@ function Conversation(props){
             details.push(<IncomingMessageChat key={i} text={detail.text}></IncomingMessageChat>)
         }
         else{
-            details.push(<Chat key={i} text={detail.text}></Chat>)
+            details.push(<Chat key={i} detail={detail}></Chat>)
         }
     }
     return details;

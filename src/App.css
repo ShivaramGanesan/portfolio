@@ -360,3 +360,11 @@ body{
 .list-view{
   overflow: scroll;
 }
+
+.chat-link{
+  color: rgb(112, 187, 230);
+}
+
+.chat-link:hover{
+  text-decoration: underline;
+}
