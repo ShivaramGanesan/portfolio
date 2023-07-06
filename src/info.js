@@ -106,3 +106,26 @@ module.exports = global.info = {
     "experience": "zoho",
     "projects": "hadoop"
  }
+
+ module.exports = global.chatHeader = {
+    "ucr": {
+        "header": "University of California, Riverside",
+        "subtext": "online (2022-2023)"
+    },
+    "svce": {
+        "header": "SVCE, Anna University",
+        "subtext": "2015 - 2019"
+    },
+    "zoho":{
+        "header": "Zoho Corporation",
+        "subtext": "2019-2022"
+    },
+    "zoho_pt":{
+        "header": "Zoho Corporation, Project Trainee",
+        "subtext": "2018-2019"
+    },
+    "nokia":{
+        "header": "Nokia Solutions and Networks",
+        "subtext": "2018-2018"
+    }
+ }

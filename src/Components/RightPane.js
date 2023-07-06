@@ -1,5 +1,6 @@
 import intro from '../img/intro2.png'
 import info from '../info'
+
 export default function RightPane(props){
     if(props.state == "home"){
         return (<div className='right-pane'>
@@ -7,18 +8,25 @@ export default function RightPane(props){
         </div>)
     }
     else{
+        var headerDetails = global.chatHeader[props.state]
+        if(!headerDetails){
+            headerDetails = {
+                "header": "You",
+                "subtext": ""
+            }
+        }
         return (<div className='right-pane'>
-            <TopDummy/><div className='chat-area'><Conversation id={props.state}/></div>
+            <TopDummy header={headerDetails.header} subtext={headerDetails.subtext}/><div className='chat-area'><Conversation id={props.state}/></div>
         </div>)
     }
 }
 
-function TopDummy(){
+function TopDummy(props){
     return (<div className='top-bar'>
         <div className="profile-icon"></div>
         <div className='header-text-top'>
-            <span className='top-text'>You</span>
-            <span className='online-text'>online</span>
+            <span className='top-text'>{props.header}</span>
+            <span className='online-text'>{props.subtext}</span>
         </div>
     </div>)
 }

@@ -266,6 +266,7 @@ body{
 .online-text{
   /* flex-grow: 1; */
   font-size: 12px;
+  text-align: left;
 }
 
 .selected-tab{
