@@ -20,7 +20,7 @@ export default function LeftPane(props){
                     setOption("")
                     props.setState("home")
                 }}><i className='left-arrow'></i></button>
-                {global.data[option] ? <span>{global.data[option].length} items</span> : null}
+                {global.data[option] ? <span> {global.displayText[option]} ({global.data[option].length} items)</span> : null}
             </div>
             <div className="list-view">
                 <ListView setChatImg={props.setChatImg} list={global.data[option]} setState={props.setState} selectedComponent={selectedComponent} updateSelectedComponent = {updateSelectedComponent}></ListView>

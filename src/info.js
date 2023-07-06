@@ -59,6 +59,12 @@ module.exports = global.info = {
     "projects": "hadoop"
  }
 
+ module.exports = global.displayText = {
+    "academics": "Education",
+    "experience": "Work Experience",
+    "projects": "Projects"
+ }
+
  module.exports = global.chatHeader = {
     "ucr": {
         "header": "University of California, Riverside",
