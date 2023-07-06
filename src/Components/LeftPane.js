@@ -79,6 +79,9 @@ function Topbar(props){
     },{
         id: "resume",
         "text": "Resume"
+    },{
+        id: "contact",
+        "text": "Contact Me!"
     }]
     const [isMenuVisible, setMenuVisibility] = useState(false);
     var moreClassName = "more-button action-button"
@@ -148,13 +151,16 @@ function Topbar(props){
                 }}><i className="down-arrow"></i>
                     {isMenuVisible ? <Dropdown list={menu} clickListener={(id)=>{
                         if(id == "resume"){
-
+                            window.open("https://drive.google.com/file/d/19JTbQCb_ya3SRP5iMyVgltcx0HLVpn8n/view?usp=sharing", "_blank");
                         }
                         else if(id == "linkedin"){
                             window.open("https://www.linkedin.com/in/shivaramganesan/", '_blank');
                         }
                         else if(id == "github"){
                             window.open("https://github.com/ShivaramGanesan", '_blank');
+                        }
+                        else if(id == "contact"){
+                            window.location.href = "mailto:shivaramganesan0406@gmail.com";
                         }
                     }}></Dropdown>: null}
                 </button>
