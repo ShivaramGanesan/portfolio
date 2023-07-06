@@ -2,6 +2,7 @@ import data from '../data'
 import defaults from '../info'
 import { useEffect, useState } from "react";
 import Dropdown from './Dropdown';
+import cloud from '../img/wordcloud2.png'
 
 export default function LeftPane(props){
     const [option, setOption] = useState("")
@@ -31,7 +32,8 @@ function ListView(props){
     }
     else{
         listView = <div className='tools-view'>
-            <span>Languages</span>
+            <img className='into-img-left' src={cloud}></img>
+            <span></span>
             <div></div>
         </div>
     }

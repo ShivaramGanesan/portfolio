@@ -343,3 +343,8 @@ body{
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
+
+.into-img-left{
+  width: 200px;
+  border-radius: 200px;
+}
