@@ -15,13 +15,14 @@ export default function LeftPane(props){
     return (
         <div className="left-pane">
             <Topbar setChatImg={props.setChatImg} setOption={setOption} updateSelectedComponent={updateSelectedComponent} setState={props.setState} option={option}></Topbar>
-            <div className='prev-pane'>
+            {option ? <div className='prev-pane'>
                 <button className='prev-button' onClick={()=>{
                     setOption("")
                     props.setState("home")
                 }}><i className='left-arrow'></i></button>
                 {global.data[option] ? <span> {global.displayText[option]} ({global.data[option].length} items)</span> : null}
-            </div>
+            </div> : null}
+            
             <div className="list-view">
                 <ListView setChatImg={props.setChatImg} list={global.data[option]} setState={props.setState} selectedComponent={selectedComponent} updateSelectedComponent = {updateSelectedComponent}></ListView>
             </div>
