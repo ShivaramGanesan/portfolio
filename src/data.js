@@ -68,25 +68,32 @@ module.exports = global.data = {
             "state": "maskdetection"
         },
         {
-            "img": require("./img/pacman.png"),
-            "header": "AI Pacman",
-            "subtext": "search algorithms",
-            "time": "",
-            "state": "aipacman"
-        },
-        {
             "img": require("./img/dummy.jpeg"),
-            "header": "Parallel Algorithms",
-            "subtext": "sorting, graph algorithms",
+            "header": "Other projects",
+            "subtext": "",
             "time": "",
-            "state": "parallel_algo"
-        },
-        {
-            "img": require("./img/dummy.jpeg"),
-            "header": "Inter procedural analysis",
-            "subtext": "LLVM, C++",
-            "time": "",
-            "state": "compiler"
+            "state": "other"
         }
+        // {
+        //     "img": require("./img/pacman.png"),
+        //     "header": "AI Pacman",
+        //     "subtext": "search algorithms",
+        //     "time": "",
+        //     "state": "aipacman"
+        // },
+        // {
+        //     "img": require("./img/dummy.jpeg"),
+        //     "header": "Parallel Algorithms",
+        //     "subtext": "sorting, graph algorithms",
+        //     "time": "",
+        //     "state": "parallel_algo"
+        // },
+        // {
+        //     "img": require("./img/dummy.jpeg"),
+        //     "header": "Inter procedural analysis",
+        //     "subtext": "LLVM, C++",
+        //     "time": "",
+        //     "state": "compiler"
+        // }
     ]
 }
