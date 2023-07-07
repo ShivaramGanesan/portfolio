@@ -1,5 +1,6 @@
 import intro from '../img/intro2.png'
 import info from '../info'
+import wabg from '../img/wa-bg.png'
 
 export default function RightPane(props){
     if(props.state == "home"){
@@ -16,7 +17,10 @@ export default function RightPane(props){
             }
         }
         return (<div className='right-pane'>
-            <TopDummy img={props.img} header={headerDetails.header} subtext={headerDetails.subtext}/><div className='chat-area'><Conversation id={props.state}/></div>
+            <TopDummy img={props.img} header={headerDetails.header} subtext={headerDetails.subtext}/>
+            <div className='chat-area'>
+                <Conversation id={props.state}/>
+            </div>
         </div>)
     }
 }
@@ -74,7 +78,11 @@ function IntroText(){
         <div className="intro-text">
             <img className="intro-img" src={intro}></img>
             <div>Hi there!  I am </div><h3> Shivaram Ganesan</h3>
-            <p>I am a Software engineer with 3 years of work experience</p>
+            <div className='intro-text-div'>
+                <p className='intro-para'>I am a passionate and experienced software engineer with a strong focus on API development and product integrations. Throughout my career, I have successfully delivered impactful solutions by leveraging my expertise in these areas. I thrive in collaborative environments and possess excellent communication skills, allowing me to effectively work with cross-functional teams and drive successful outcomes.</p>
+            <p className='intro-para'>While my core interest lies in product development, I have a natural curiosity and a desire to continuously learn and expand my skill set. I stay up-to-date with the latest technologies, including artificial intelligence (AI) and machine learning (ML), as I believe in their potential to revolutionize the industry. With a ready-to-learn mindset, I eagerly embrace new challenges and opportunities to acquire new knowledge and skills.</p>
+            <p className='intro-para'>Please feel free to browse through the conversations to gain a deeper understanding of the value I bring and the projects I have worked on.</p>
+            </div>
             <div className='tech-stack'>
 
             </div>

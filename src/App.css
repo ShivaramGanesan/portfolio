@@ -54,6 +54,7 @@ body{
   color: white;
   background-color: rgba(20, 27, 32, 0.5);
   /* background-color: teal; */
+  font-family: helvetica;
 }
 
 .top-bar{
@@ -256,7 +257,7 @@ body{
 }
 
 .intro-img{
-  width: 400px;
+  width: 450px;
 }
 
 .right-pane{
@@ -293,7 +294,8 @@ body{
 }
 
 .chat-area{
-  background-color: rgb(13, 20, 25);
+  /* background-color: rgb(13, 20, 25); */
+  background-image: url(./img/wa-bg.jpeg);
   display: flex;
   flex-direction: column;
   overflow: scroll;
@@ -445,3 +447,14 @@ body{
   top: -3px;
   color: rgba(0, 0, 0, 0.5);
 } */
+
+
+.intro-text-div{
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.intro-para{
+  text-align: justify;
+  text-justify: inter-word;
+}

@@ -40,7 +40,7 @@ function ListView(props){
     else{
         listView = <div className='tools-view'>
             <img className='into-img-left' src={cloud}></img>
-            <span></span>
+            <p>Software is a great combination of artistry and engineering</p>
             <div></div>
         </div>
     }
