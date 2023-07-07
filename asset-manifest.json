@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/shivaram.github.io/static/css/main.b4ce59dc.css",
+    "main.js": "/shivaram.github.io/static/js/main.78796b9b.js",
+    "static/js/787.1ed0c42c.chunk.js": "/shivaram.github.io/static/js/787.1ed0c42c.chunk.js",
+    "static/media/wordcloud3.png": "/shivaram.github.io/static/media/wordcloud3.bad7de53e97127cac481.png",
+    "static/media/shiva.jpeg": "/shivaram.github.io/static/media/shiva.89fa817612d125688e73.jpeg",
+    "static/media/react.png": "/shivaram.github.io/static/media/react.6bcffb56bd0efaa47767.png",
+    "static/media/intro2.png": "/shivaram.github.io/static/media/intro2.9e59e829f5cca21e3a2d.png",
+    "static/media/wa-bg.png": "/shivaram.github.io/static/media/wa-bg.39f53e74f66d348d9f7c.png",
+    "static/media/wa-bg.jpeg": "/shivaram.github.io/static/media/wa-bg.e9279f3c5901266e059c.jpeg",
+    "static/media/nokia.jpeg": "/shivaram.github.io/static/media/nokia.52295d7ee3d6284e0fea.jpeg",
+    "static/media/mask.jpeg": "/shivaram.github.io/static/media/mask.ecd60c9366a834907536.jpeg",
+    "static/media/ucr.png": "/shivaram.github.io/static/media/ucr.056390977f96624d8050.png",
+    "static/media/zoho.png": "/shivaram.github.io/static/media/zoho.400a35a46b0c0f6da568.png",
+    "static/media/web_crawler.png": "/shivaram.github.io/static/media/web_crawler.85e1b4d8c7746695bf49.png",
+    "static/media/hadoop.jpg": "/shivaram.github.io/static/media/hadoop.6681243ab9c8b82fc5f6.jpg",
+    "static/media/svce.jpeg": "/shivaram.github.io/static/media/svce.2adc44069596ed0cfdb7.jpeg",
+    "static/media/dummy.jpeg": "/shivaram.github.io/static/media/dummy.368b895418fe78153dc1.jpeg",
+    "static/media/logo.svg": "/shivaram.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/shivaram.github.io/index.html",
+    "main.b4ce59dc.css.map": "/shivaram.github.io/static/css/main.b4ce59dc.css.map",
+    "main.78796b9b.js.map": "/shivaram.github.io/static/js/main.78796b9b.js.map",
+    "787.1ed0c42c.chunk.js.map": "/shivaram.github.io/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4ce59dc.css",
+    "static/js/main.78796b9b.js"
+  ]
+}
