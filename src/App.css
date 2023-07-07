@@ -253,7 +253,8 @@ body{
 } */
 
 .left-pane{
-  background-color: rgb(20, 27, 32);
+  /* background-color: rgb(20, 27, 32); */
+  background-color: #1e2227;
 }
 
 .intro-img{
@@ -409,7 +410,7 @@ body{
 
 .into-img-left{
   width: 200px;
-  border-radius: 200px;
+  /* border-radius: 200px; */
 }
 
 .list-view{
@@ -452,9 +453,39 @@ body{
 .intro-text-div{
   padding: 20px;
   padding-top: 0px;
+  overflow: scroll;
+  height: 250px;
+  background-color: rgba(20, 27, 32, 0.5);
 }
 
 .intro-para{
   text-align: justify;
   text-justify: inter-word;
+}
+
+.intro-quote{
+  padding: 10px;
+  margin-left: 10px !important;
+  /* color: #34B7F1; */
+  margin-bottom: 20px;
+}
+
+.text-head{
+  /* color: rgba(55, 126, 106, 1); */
+  color: rgb(52 209 165);
+  font-weight: bold;
+}
+
+.tech-heading{
+  text-align: left;
+  padding-left: 20px;
+}
+
+.tech-list{
+  padding-left: 20px;
+  text-align: left;
+}
+
+.tick{
+  float: right;
 }

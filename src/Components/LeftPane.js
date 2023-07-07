@@ -2,7 +2,7 @@ import data from '../data'
 import defaults from '../info'
 import { useEffect, useState } from "react";
 import Dropdown from './Dropdown';
-import cloud from '../img/wordcloud2.png'
+import cloud from '../img/wordcloud3.png'
 import shiva from "../img/shiva.jpeg"
 import ucrImage from "../img/ucr.png"
 import zohoImg from "../img/zoho.png"
@@ -40,8 +40,16 @@ function ListView(props){
     else{
         listView = <div className='tools-view'>
             <img className='into-img-left' src={cloud}></img>
-            <p>Software is a great combination of artistry and engineering</p>
-            <div></div>
+            <div className='chat-bubble intro-quote'>
+                Software is a great combination of artistry and engineering
+                <svg className='tick' xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg>
+            </div>
+            <div className='tech-stack-div'>
+                <p className='text-head tech-heading'>Tech Stack:</p>
+                <p className='tech-list'>Java, Python, SQL, Unix scripting, Javascript, Jquery, reactjs, c++, HTML, css</p>
+                <p className='text-head tech-heading'>Tools and Frameworks:</p>
+                <p className='tech-list'>Git, Android studio, Xcode, struts, Hadoop, LLVM, BERT, web scraping</p>
+            </div>
         </div>
     }
     return listView;
